@@ -13,7 +13,7 @@ public class SetDimCommand : InputOutputCommand
     [Option("-d|--dim", Description = "Dimension to set.  Default = N. Use string e.g. 'N' for dynamic batch size or integer e.g. '3' for fixed size")]
     public string Dim { get; } = "N";
 
-    protected override void Run(ModelProto model)
+    public override void Run(ModelProto model)
     {
         // Should this not be before loading input? Is the abstract base really that good?
 

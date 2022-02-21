@@ -1,6 +1,6 @@
 ﻿namespace Onnx.Formatting
 {
-    internal enum Align
+    public enum Align
     {
         Left,
         Right,

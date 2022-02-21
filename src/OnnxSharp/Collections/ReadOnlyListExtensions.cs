@@ -17,7 +17,7 @@ namespace Onnx.Collections
             return product;
         }
 
-        internal static T Single<T, TSelect>(this IReadOnlyList<T> fields, Func<T, TSelect> select, TSelect valueToFind)
+        public static T Single<T, TSelect>(this IReadOnlyList<T> fields, Func<T, TSelect> select, TSelect valueToFind)
             where TSelect : IEquatable<TSelect>
         {
             for (int i = 0; i < fields.Count; i++)

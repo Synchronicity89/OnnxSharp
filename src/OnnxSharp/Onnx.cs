@@ -19,7 +19,7 @@ namespace Onnx {
     public static pbr::FileDescriptor Descriptor {
       get { return descriptor; }
     }
-    private static pbr::FileDescriptor descriptor;
+    public static pbr::FileDescriptor descriptor;
 
     static OnnxReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
@@ -211,8 +211,8 @@ namespace Onnx {
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<AttributeProto> _parser = new pb::MessageParser<AttributeProto>(() => new AttributeProto());
-    private pb::UnknownFieldSet _unknownFields;
+    public static readonly pb::MessageParser<AttributeProto> _parser = new pb::MessageParser<AttributeProto>(() => new AttributeProto());
+    public pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<AttributeProto> Parser { get { return _parser; } }
 
@@ -261,7 +261,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 1;
-    private string name_ = "";
+    public string name_ = "";
     /// <summary>
     /// The name field MUST be present for this version of the IR.
     /// </summary>
@@ -275,7 +275,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "ref_attr_name" field.</summary>
     public const int RefAttrNameFieldNumber = 21;
-    private string refAttrName_ = "";
+    public string refAttrName_ = "";
     /// <summary>
     /// if ref_attr_name is not empty, ref_attr_name is the attribute name in parent function.
     /// In this case, this AttributeProto does not contain data, and it's a reference of attribute
@@ -292,7 +292,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "doc_string" field.</summary>
     public const int DocStringFieldNumber = 13;
-    private string docString_ = "";
+    public string docString_ = "";
     /// <summary>
     /// A human-readable documentation for this attribute. Markdown is allowed.
     /// </summary>
@@ -306,7 +306,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 20;
-    private global::Onnx.AttributeProto.Types.AttributeType type_ = global::Onnx.AttributeProto.Types.AttributeType.Undefined;
+    public global::Onnx.AttributeProto.Types.AttributeType type_ = global::Onnx.AttributeProto.Types.AttributeType.Undefined;
     /// <summary>
     /// The type field MUST be present for this version of the IR.
     /// For 0.0.1 versions of the IR, this field was not defined, and
@@ -325,7 +325,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "f" field.</summary>
     public const int FFieldNumber = 2;
-    private float f_;
+    public float f_;
     /// <summary>
     /// Exactly ONE of the following fields must be present for this version of the IR
     /// </summary>
@@ -339,7 +339,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "i" field.</summary>
     public const int IFieldNumber = 3;
-    private long i_;
+    public long i_;
     /// <summary>
     /// int
     /// </summary>
@@ -353,7 +353,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "s" field.</summary>
     public const int SFieldNumber = 4;
-    private pb::ByteString s_ = pb::ByteString.Empty;
+    public pb::ByteString s_ = pb::ByteString.Empty;
     /// <summary>
     /// UTF-8 string
     /// </summary>
@@ -367,7 +367,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "t" field.</summary>
     public const int TFieldNumber = 5;
-    private global::Onnx.TensorProto t_;
+    public global::Onnx.TensorProto t_;
     /// <summary>
     /// tensor value
     /// </summary>
@@ -381,7 +381,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "g" field.</summary>
     public const int GFieldNumber = 6;
-    private global::Onnx.GraphProto g_;
+    public global::Onnx.GraphProto g_;
     /// <summary>
     /// graph
     /// </summary>
@@ -395,7 +395,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "sparse_tensor" field.</summary>
     public const int SparseTensorFieldNumber = 22;
-    private global::Onnx.SparseTensorProto sparseTensor_;
+    public global::Onnx.SparseTensorProto sparseTensor_;
     /// <summary>
     /// sparse tensor value
     /// </summary>
@@ -409,9 +409,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "floats" field.</summary>
     public const int FloatsFieldNumber = 7;
-    private static readonly pb::FieldCodec<float> _repeated_floats_codec
+    public static readonly pb::FieldCodec<float> _repeated_floats_codec
         = pb::FieldCodec.ForFloat(58);
-    private readonly pbc::RepeatedField<float> floats_ = new pbc::RepeatedField<float>();
+    public readonly pbc::RepeatedField<float> floats_ = new pbc::RepeatedField<float>();
     /// <summary>
     /// list of floats
     /// </summary>
@@ -422,9 +422,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "ints" field.</summary>
     public const int IntsFieldNumber = 8;
-    private static readonly pb::FieldCodec<long> _repeated_ints_codec
+    public static readonly pb::FieldCodec<long> _repeated_ints_codec
         = pb::FieldCodec.ForInt64(66);
-    private readonly pbc::RepeatedField<long> ints_ = new pbc::RepeatedField<long>();
+    public readonly pbc::RepeatedField<long> ints_ = new pbc::RepeatedField<long>();
     /// <summary>
     /// list of ints
     /// </summary>
@@ -435,9 +435,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "strings" field.</summary>
     public const int StringsFieldNumber = 9;
-    private static readonly pb::FieldCodec<pb::ByteString> _repeated_strings_codec
+    public static readonly pb::FieldCodec<pb::ByteString> _repeated_strings_codec
         = pb::FieldCodec.ForBytes(74);
-    private readonly pbc::RepeatedField<pb::ByteString> strings_ = new pbc::RepeatedField<pb::ByteString>();
+    public readonly pbc::RepeatedField<pb::ByteString> strings_ = new pbc::RepeatedField<pb::ByteString>();
     /// <summary>
     /// list of UTF-8 strings
     /// </summary>
@@ -448,9 +448,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "tensors" field.</summary>
     public const int TensorsFieldNumber = 10;
-    private static readonly pb::FieldCodec<global::Onnx.TensorProto> _repeated_tensors_codec
+    public static readonly pb::FieldCodec<global::Onnx.TensorProto> _repeated_tensors_codec
         = pb::FieldCodec.ForMessage(82, global::Onnx.TensorProto.Parser);
-    private readonly pbc::RepeatedField<global::Onnx.TensorProto> tensors_ = new pbc::RepeatedField<global::Onnx.TensorProto>();
+    public readonly pbc::RepeatedField<global::Onnx.TensorProto> tensors_ = new pbc::RepeatedField<global::Onnx.TensorProto>();
     /// <summary>
     /// list of tensors
     /// </summary>
@@ -461,9 +461,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "graphs" field.</summary>
     public const int GraphsFieldNumber = 11;
-    private static readonly pb::FieldCodec<global::Onnx.GraphProto> _repeated_graphs_codec
+    public static readonly pb::FieldCodec<global::Onnx.GraphProto> _repeated_graphs_codec
         = pb::FieldCodec.ForMessage(90, global::Onnx.GraphProto.Parser);
-    private readonly pbc::RepeatedField<global::Onnx.GraphProto> graphs_ = new pbc::RepeatedField<global::Onnx.GraphProto>();
+    public readonly pbc::RepeatedField<global::Onnx.GraphProto> graphs_ = new pbc::RepeatedField<global::Onnx.GraphProto>();
     /// <summary>
     /// list of graph
     /// </summary>
@@ -474,9 +474,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "sparse_tensors" field.</summary>
     public const int SparseTensorsFieldNumber = 23;
-    private static readonly pb::FieldCodec<global::Onnx.SparseTensorProto> _repeated_sparseTensors_codec
+    public static readonly pb::FieldCodec<global::Onnx.SparseTensorProto> _repeated_sparseTensors_codec
         = pb::FieldCodec.ForMessage(186, global::Onnx.SparseTensorProto.Parser);
-    private readonly pbc::RepeatedField<global::Onnx.SparseTensorProto> sparseTensors_ = new pbc::RepeatedField<global::Onnx.SparseTensorProto>();
+    public readonly pbc::RepeatedField<global::Onnx.SparseTensorProto> sparseTensors_ = new pbc::RepeatedField<global::Onnx.SparseTensorProto>();
     /// <summary>
     /// list of sparse tensors
     /// </summary>
@@ -975,8 +975,8 @@ namespace Onnx {
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<ValueInfoProto> _parser = new pb::MessageParser<ValueInfoProto>(() => new ValueInfoProto());
-    private pb::UnknownFieldSet _unknownFields;
+    public static readonly pb::MessageParser<ValueInfoProto> _parser = new pb::MessageParser<ValueInfoProto>(() => new ValueInfoProto());
+    public pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ValueInfoProto> Parser { get { return _parser; } }
 
@@ -1012,7 +1012,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 1;
-    private string name_ = "";
+    public string name_ = "";
     /// <summary>
     /// This field MUST be present in this version of the IR.
     /// </summary>
@@ -1026,7 +1026,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 2;
-    private global::Onnx.TypeProto type_;
+    public global::Onnx.TypeProto type_;
     /// <summary>
     /// This field MUST be present in this version of the IR for
     /// inputs and outputs of the top-level graph.
@@ -1041,7 +1041,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "doc_string" field.</summary>
     public const int DocStringFieldNumber = 3;
-    private string docString_ = "";
+    public string docString_ = "";
     /// <summary>
     /// A human-readable documentation for this value. Markdown is allowed.
     /// </summary>
@@ -1247,8 +1247,8 @@ namespace Onnx {
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<NodeProto> _parser = new pb::MessageParser<NodeProto>(() => new NodeProto());
-    private pb::UnknownFieldSet _unknownFields;
+    public static readonly pb::MessageParser<NodeProto> _parser = new pb::MessageParser<NodeProto>(() => new NodeProto());
+    public pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<NodeProto> Parser { get { return _parser; } }
 
@@ -1288,9 +1288,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "input" field.</summary>
     public const int InputFieldNumber = 1;
-    private static readonly pb::FieldCodec<string> _repeated_input_codec
+    public static readonly pb::FieldCodec<string> _repeated_input_codec
         = pb::FieldCodec.ForString(10);
-    private readonly pbc::RepeatedField<string> input_ = new pbc::RepeatedField<string>();
+    public readonly pbc::RepeatedField<string> input_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// namespace Value
     /// </summary>
@@ -1301,9 +1301,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "output" field.</summary>
     public const int OutputFieldNumber = 2;
-    private static readonly pb::FieldCodec<string> _repeated_output_codec
+    public static readonly pb::FieldCodec<string> _repeated_output_codec
         = pb::FieldCodec.ForString(18);
-    private readonly pbc::RepeatedField<string> output_ = new pbc::RepeatedField<string>();
+    public readonly pbc::RepeatedField<string> output_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// namespace Value
     /// </summary>
@@ -1314,7 +1314,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 3;
-    private string name_ = "";
+    public string name_ = "";
     /// <summary>
     /// An optional identifier for this node in a graph.
     /// This field MAY be absent in ths version of the IR.
@@ -1329,7 +1329,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "op_type" field.</summary>
     public const int OpTypeFieldNumber = 4;
-    private string opType_ = "";
+    public string opType_ = "";
     /// <summary>
     /// The symbolic identifier of the Operator to execute.
     /// </summary>
@@ -1343,7 +1343,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "domain" field.</summary>
     public const int DomainFieldNumber = 7;
-    private string domain_ = "";
+    public string domain_ = "";
     /// <summary>
     /// The domain of the OperatorSet that specifies the operator named by op_type.
     /// </summary>
@@ -1357,9 +1357,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "attribute" field.</summary>
     public const int AttributeFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::Onnx.AttributeProto> _repeated_attribute_codec
+    public static readonly pb::FieldCodec<global::Onnx.AttributeProto> _repeated_attribute_codec
         = pb::FieldCodec.ForMessage(42, global::Onnx.AttributeProto.Parser);
-    private readonly pbc::RepeatedField<global::Onnx.AttributeProto> attribute_ = new pbc::RepeatedField<global::Onnx.AttributeProto>();
+    public readonly pbc::RepeatedField<global::Onnx.AttributeProto> attribute_ = new pbc::RepeatedField<global::Onnx.AttributeProto>();
     /// <summary>
     /// Additional named attributes.
     /// </summary>
@@ -1370,7 +1370,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "doc_string" field.</summary>
     public const int DocStringFieldNumber = 6;
-    private string docString_ = "";
+    public string docString_ = "";
     /// <summary>
     /// A human-readable documentation for this node. Markdown is allowed.
     /// </summary>
@@ -1645,8 +1645,8 @@ namespace Onnx {
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<TrainingInfoProto> _parser = new pb::MessageParser<TrainingInfoProto>(() => new TrainingInfoProto());
-    private pb::UnknownFieldSet _unknownFields;
+    public static readonly pb::MessageParser<TrainingInfoProto> _parser = new pb::MessageParser<TrainingInfoProto>(() => new TrainingInfoProto());
+    public pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<TrainingInfoProto> Parser { get { return _parser; } }
 
@@ -1683,7 +1683,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "initialization" field.</summary>
     public const int InitializationFieldNumber = 1;
-    private global::Onnx.GraphProto initialization_;
+    public global::Onnx.GraphProto initialization_;
     /// <summary>
     /// This field describes a graph to compute the initial tensors
     /// upon starting the training process. Initialization graph has no input
@@ -1709,7 +1709,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "algorithm" field.</summary>
     public const int AlgorithmFieldNumber = 2;
-    private global::Onnx.GraphProto algorithm_;
+    public global::Onnx.GraphProto algorithm_;
     /// <summary>
     /// This field represents a training algorithm step. Given required inputs,
     /// it computes outputs to update initializers in its own or inference graph's
@@ -1751,9 +1751,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "initialization_binding" field.</summary>
     public const int InitializationBindingFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Onnx.StringStringEntryProto> _repeated_initializationBinding_codec
+    public static readonly pb::FieldCodec<global::Onnx.StringStringEntryProto> _repeated_initializationBinding_codec
         = pb::FieldCodec.ForMessage(26, global::Onnx.StringStringEntryProto.Parser);
-    private readonly pbc::RepeatedField<global::Onnx.StringStringEntryProto> initializationBinding_ = new pbc::RepeatedField<global::Onnx.StringStringEntryProto>();
+    public readonly pbc::RepeatedField<global::Onnx.StringStringEntryProto> initializationBinding_ = new pbc::RepeatedField<global::Onnx.StringStringEntryProto>();
     /// <summary>
     /// This field specifies the bindings from the outputs of "initialization" to
     /// some initializers in "ModelProto.graph.initializer" and
@@ -1770,9 +1770,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "update_binding" field.</summary>
     public const int UpdateBindingFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Onnx.StringStringEntryProto> _repeated_updateBinding_codec
+    public static readonly pb::FieldCodec<global::Onnx.StringStringEntryProto> _repeated_updateBinding_codec
         = pb::FieldCodec.ForMessage(34, global::Onnx.StringStringEntryProto.Parser);
-    private readonly pbc::RepeatedField<global::Onnx.StringStringEntryProto> updateBinding_ = new pbc::RepeatedField<global::Onnx.StringStringEntryProto>();
+    public readonly pbc::RepeatedField<global::Onnx.StringStringEntryProto> updateBinding_ = new pbc::RepeatedField<global::Onnx.StringStringEntryProto>();
     /// <summary>
     /// Gradient-based training is usually an iterative procedure. In one gradient
     /// descent iteration, we apply
@@ -2026,8 +2026,8 @@ namespace Onnx {
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<ModelProto> _parser = new pb::MessageParser<ModelProto>(() => new ModelProto());
-    private pb::UnknownFieldSet _unknownFields;
+    public static readonly pb::MessageParser<ModelProto> _parser = new pb::MessageParser<ModelProto>(() => new ModelProto());
+    public pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ModelProto> Parser { get { return _parser; } }
 
@@ -2070,7 +2070,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "ir_version" field.</summary>
     public const int IrVersionFieldNumber = 1;
-    private long irVersion_;
+    public long irVersion_;
     /// <summary>
     /// The version of the IR this model targets. See Version enum above.
     /// This field MUST be present.
@@ -2085,9 +2085,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "opset_import" field.</summary>
     public const int OpsetImportFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::Onnx.OperatorSetIdProto> _repeated_opsetImport_codec
+    public static readonly pb::FieldCodec<global::Onnx.OperatorSetIdProto> _repeated_opsetImport_codec
         = pb::FieldCodec.ForMessage(66, global::Onnx.OperatorSetIdProto.Parser);
-    private readonly pbc::RepeatedField<global::Onnx.OperatorSetIdProto> opsetImport_ = new pbc::RepeatedField<global::Onnx.OperatorSetIdProto>();
+    public readonly pbc::RepeatedField<global::Onnx.OperatorSetIdProto> opsetImport_ = new pbc::RepeatedField<global::Onnx.OperatorSetIdProto>();
     /// <summary>
     /// The OperatorSets this model relies on.
     /// All ModelProtos MUST have at least one entry that
@@ -2105,7 +2105,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "producer_name" field.</summary>
     public const int ProducerNameFieldNumber = 2;
-    private string producerName_ = "";
+    public string producerName_ = "";
     /// <summary>
     /// The name of the framework or tool used to generate this model.
     /// This field SHOULD be present to indicate which implementation/tool/framework
@@ -2121,7 +2121,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "producer_version" field.</summary>
     public const int ProducerVersionFieldNumber = 3;
-    private string producerVersion_ = "";
+    public string producerVersion_ = "";
     /// <summary>
     /// The version of the framework or tool used to generate this model.
     /// This field SHOULD be present to indicate which implementation/tool/framework
@@ -2137,7 +2137,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "domain" field.</summary>
     public const int DomainFieldNumber = 4;
-    private string domain_ = "";
+    public string domain_ = "";
     /// <summary>
     /// Domain name of the model.
     /// We use reverse domain names as name space indicators. For example:
@@ -2156,7 +2156,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "model_version" field.</summary>
     public const int ModelVersionFieldNumber = 5;
-    private long modelVersion_;
+    public long modelVersion_;
     /// <summary>
     /// The version of the graph encoded. See Version enum below.
     /// </summary>
@@ -2170,7 +2170,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "doc_string" field.</summary>
     public const int DocStringFieldNumber = 6;
-    private string docString_ = "";
+    public string docString_ = "";
     /// <summary>
     /// A human-readable documentation for this model. Markdown is allowed.
     /// </summary>
@@ -2184,7 +2184,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "graph" field.</summary>
     public const int GraphFieldNumber = 7;
-    private global::Onnx.GraphProto graph_;
+    public global::Onnx.GraphProto graph_;
     /// <summary>
     /// The parameterized graph that is evaluated to execute the model.
     /// </summary>
@@ -2198,9 +2198,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "metadata_props" field.</summary>
     public const int MetadataPropsFieldNumber = 14;
-    private static readonly pb::FieldCodec<global::Onnx.StringStringEntryProto> _repeated_metadataProps_codec
+    public static readonly pb::FieldCodec<global::Onnx.StringStringEntryProto> _repeated_metadataProps_codec
         = pb::FieldCodec.ForMessage(114, global::Onnx.StringStringEntryProto.Parser);
-    private readonly pbc::RepeatedField<global::Onnx.StringStringEntryProto> metadataProps_ = new pbc::RepeatedField<global::Onnx.StringStringEntryProto>();
+    public readonly pbc::RepeatedField<global::Onnx.StringStringEntryProto> metadataProps_ = new pbc::RepeatedField<global::Onnx.StringStringEntryProto>();
     /// <summary>
     /// Named metadata values; keys should be distinct.
     /// </summary>
@@ -2211,9 +2211,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "training_info" field.</summary>
     public const int TrainingInfoFieldNumber = 20;
-    private static readonly pb::FieldCodec<global::Onnx.TrainingInfoProto> _repeated_trainingInfo_codec
+    public static readonly pb::FieldCodec<global::Onnx.TrainingInfoProto> _repeated_trainingInfo_codec
         = pb::FieldCodec.ForMessage(162, global::Onnx.TrainingInfoProto.Parser);
-    private readonly pbc::RepeatedField<global::Onnx.TrainingInfoProto> trainingInfo_ = new pbc::RepeatedField<global::Onnx.TrainingInfoProto>();
+    public readonly pbc::RepeatedField<global::Onnx.TrainingInfoProto> trainingInfo_ = new pbc::RepeatedField<global::Onnx.TrainingInfoProto>();
     /// <summary>
     /// Training-specific information. Sequentially executing all stored
     /// `TrainingInfoProto.algorithm`s and assigning their outputs following
@@ -2557,8 +2557,8 @@ namespace Onnx {
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<StringStringEntryProto> _parser = new pb::MessageParser<StringStringEntryProto>(() => new StringStringEntryProto());
-    private pb::UnknownFieldSet _unknownFields;
+    public static readonly pb::MessageParser<StringStringEntryProto> _parser = new pb::MessageParser<StringStringEntryProto>(() => new StringStringEntryProto());
+    public pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<StringStringEntryProto> Parser { get { return _parser; } }
 
@@ -2593,7 +2593,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "key" field.</summary>
     public const int KeyFieldNumber = 1;
-    private string key_ = "";
+    public string key_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Key {
       get { return key_; }
@@ -2604,7 +2604,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "value" field.</summary>
     public const int ValueFieldNumber = 2;
-    private string value_ = "";
+    public string value_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Value {
       get { return value_; }
@@ -2765,8 +2765,8 @@ namespace Onnx {
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<TensorAnnotation> _parser = new pb::MessageParser<TensorAnnotation>(() => new TensorAnnotation());
-    private pb::UnknownFieldSet _unknownFields;
+    public static readonly pb::MessageParser<TensorAnnotation> _parser = new pb::MessageParser<TensorAnnotation>(() => new TensorAnnotation());
+    public pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<TensorAnnotation> Parser { get { return _parser; } }
 
@@ -2801,7 +2801,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "tensor_name" field.</summary>
     public const int TensorNameFieldNumber = 1;
-    private string tensorName_ = "";
+    public string tensorName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string TensorName {
       get { return tensorName_; }
@@ -2812,9 +2812,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "quant_parameter_tensor_names" field.</summary>
     public const int QuantParameterTensorNamesFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Onnx.StringStringEntryProto> _repeated_quantParameterTensorNames_codec
+    public static readonly pb::FieldCodec<global::Onnx.StringStringEntryProto> _repeated_quantParameterTensorNames_codec
         = pb::FieldCodec.ForMessage(18, global::Onnx.StringStringEntryProto.Parser);
-    private readonly pbc::RepeatedField<global::Onnx.StringStringEntryProto> quantParameterTensorNames_ = new pbc::RepeatedField<global::Onnx.StringStringEntryProto>();
+    public readonly pbc::RepeatedField<global::Onnx.StringStringEntryProto> quantParameterTensorNames_ = new pbc::RepeatedField<global::Onnx.StringStringEntryProto>();
     /// <summary>
     /// &lt;key, value> pairs to annotate tensor specified by &lt;tensor_name> above.
     /// The keys used in the mapping below must be pre-defined in ONNX spec.
@@ -2976,8 +2976,8 @@ namespace Onnx {
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<GraphProto> _parser = new pb::MessageParser<GraphProto>(() => new GraphProto());
-    private pb::UnknownFieldSet _unknownFields;
+    public static readonly pb::MessageParser<GraphProto> _parser = new pb::MessageParser<GraphProto>(() => new GraphProto());
+    public pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<GraphProto> Parser { get { return _parser; } }
 
@@ -3019,9 +3019,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "node" field.</summary>
     public const int NodeFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Onnx.NodeProto> _repeated_node_codec
+    public static readonly pb::FieldCodec<global::Onnx.NodeProto> _repeated_node_codec
         = pb::FieldCodec.ForMessage(10, global::Onnx.NodeProto.Parser);
-    private readonly pbc::RepeatedField<global::Onnx.NodeProto> node_ = new pbc::RepeatedField<global::Onnx.NodeProto>();
+    public readonly pbc::RepeatedField<global::Onnx.NodeProto> node_ = new pbc::RepeatedField<global::Onnx.NodeProto>();
     /// <summary>
     /// The nodes in the graph, sorted topologically.
     /// </summary>
@@ -3032,7 +3032,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 2;
-    private string name_ = "";
+    public string name_ = "";
     /// <summary>
     /// The name of the graph.
     /// </summary>
@@ -3046,9 +3046,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "initializer" field.</summary>
     public const int InitializerFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::Onnx.TensorProto> _repeated_initializer_codec
+    public static readonly pb::FieldCodec<global::Onnx.TensorProto> _repeated_initializer_codec
         = pb::FieldCodec.ForMessage(42, global::Onnx.TensorProto.Parser);
-    private readonly pbc::RepeatedField<global::Onnx.TensorProto> initializer_ = new pbc::RepeatedField<global::Onnx.TensorProto>();
+    public readonly pbc::RepeatedField<global::Onnx.TensorProto> initializer_ = new pbc::RepeatedField<global::Onnx.TensorProto>();
     /// <summary>
     /// A list of named tensor values, used to specify constant inputs of the graph.
     /// Each initializer (both TensorProto as well SparseTensorProto) MUST have a name.
@@ -3062,9 +3062,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "sparse_initializer" field.</summary>
     public const int SparseInitializerFieldNumber = 15;
-    private static readonly pb::FieldCodec<global::Onnx.SparseTensorProto> _repeated_sparseInitializer_codec
+    public static readonly pb::FieldCodec<global::Onnx.SparseTensorProto> _repeated_sparseInitializer_codec
         = pb::FieldCodec.ForMessage(122, global::Onnx.SparseTensorProto.Parser);
-    private readonly pbc::RepeatedField<global::Onnx.SparseTensorProto> sparseInitializer_ = new pbc::RepeatedField<global::Onnx.SparseTensorProto>();
+    public readonly pbc::RepeatedField<global::Onnx.SparseTensorProto> sparseInitializer_ = new pbc::RepeatedField<global::Onnx.SparseTensorProto>();
     /// <summary>
     /// Initializers (see above) stored in sparse format.
     /// </summary>
@@ -3075,7 +3075,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "doc_string" field.</summary>
     public const int DocStringFieldNumber = 10;
-    private string docString_ = "";
+    public string docString_ = "";
     /// <summary>
     /// A human-readable documentation for this graph. Markdown is allowed.
     /// </summary>
@@ -3089,9 +3089,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "input" field.</summary>
     public const int InputFieldNumber = 11;
-    private static readonly pb::FieldCodec<global::Onnx.ValueInfoProto> _repeated_input_codec
+    public static readonly pb::FieldCodec<global::Onnx.ValueInfoProto> _repeated_input_codec
         = pb::FieldCodec.ForMessage(90, global::Onnx.ValueInfoProto.Parser);
-    private readonly pbc::RepeatedField<global::Onnx.ValueInfoProto> input_ = new pbc::RepeatedField<global::Onnx.ValueInfoProto>();
+    public readonly pbc::RepeatedField<global::Onnx.ValueInfoProto> input_ = new pbc::RepeatedField<global::Onnx.ValueInfoProto>();
     /// <summary>
     /// The inputs and outputs of the graph.
     /// </summary>
@@ -3102,9 +3102,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "output" field.</summary>
     public const int OutputFieldNumber = 12;
-    private static readonly pb::FieldCodec<global::Onnx.ValueInfoProto> _repeated_output_codec
+    public static readonly pb::FieldCodec<global::Onnx.ValueInfoProto> _repeated_output_codec
         = pb::FieldCodec.ForMessage(98, global::Onnx.ValueInfoProto.Parser);
-    private readonly pbc::RepeatedField<global::Onnx.ValueInfoProto> output_ = new pbc::RepeatedField<global::Onnx.ValueInfoProto>();
+    public readonly pbc::RepeatedField<global::Onnx.ValueInfoProto> output_ = new pbc::RepeatedField<global::Onnx.ValueInfoProto>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Onnx.ValueInfoProto> Output {
       get { return output_; }
@@ -3112,9 +3112,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "value_info" field.</summary>
     public const int ValueInfoFieldNumber = 13;
-    private static readonly pb::FieldCodec<global::Onnx.ValueInfoProto> _repeated_valueInfo_codec
+    public static readonly pb::FieldCodec<global::Onnx.ValueInfoProto> _repeated_valueInfo_codec
         = pb::FieldCodec.ForMessage(106, global::Onnx.ValueInfoProto.Parser);
-    private readonly pbc::RepeatedField<global::Onnx.ValueInfoProto> valueInfo_ = new pbc::RepeatedField<global::Onnx.ValueInfoProto>();
+    public readonly pbc::RepeatedField<global::Onnx.ValueInfoProto> valueInfo_ = new pbc::RepeatedField<global::Onnx.ValueInfoProto>();
     /// <summary>
     /// Information for the values in the graph. The ValueInfoProto.name's
     /// must be distinct. It is optional for a value to appear in value_info list.
@@ -3126,9 +3126,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "quantization_annotation" field.</summary>
     public const int QuantizationAnnotationFieldNumber = 14;
-    private static readonly pb::FieldCodec<global::Onnx.TensorAnnotation> _repeated_quantizationAnnotation_codec
+    public static readonly pb::FieldCodec<global::Onnx.TensorAnnotation> _repeated_quantizationAnnotation_codec
         = pb::FieldCodec.ForMessage(114, global::Onnx.TensorAnnotation.Parser);
-    private readonly pbc::RepeatedField<global::Onnx.TensorAnnotation> quantizationAnnotation_ = new pbc::RepeatedField<global::Onnx.TensorAnnotation>();
+    public readonly pbc::RepeatedField<global::Onnx.TensorAnnotation> quantizationAnnotation_ = new pbc::RepeatedField<global::Onnx.TensorAnnotation>();
     /// <summary>
     /// This field carries information to indicate the mapping among a tensor and its
     /// quantization parameter tensors. For example:
@@ -3395,8 +3395,8 @@ namespace Onnx {
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<TensorProto> _parser = new pb::MessageParser<TensorProto>(() => new TensorProto());
-    private pb::UnknownFieldSet _unknownFields;
+    public static readonly pb::MessageParser<TensorProto> _parser = new pb::MessageParser<TensorProto>(() => new TensorProto());
+    public pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<TensorProto> Parser { get { return _parser; } }
 
@@ -3443,9 +3443,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "dims" field.</summary>
     public const int DimsFieldNumber = 1;
-    private static readonly pb::FieldCodec<long> _repeated_dims_codec
+    public static readonly pb::FieldCodec<long> _repeated_dims_codec
         = pb::FieldCodec.ForInt64(10);
-    private readonly pbc::RepeatedField<long> dims_ = new pbc::RepeatedField<long>();
+    public readonly pbc::RepeatedField<long> dims_ = new pbc::RepeatedField<long>();
     /// <summary>
     /// The shape of the tensor.
     /// </summary>
@@ -3456,7 +3456,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "data_type" field.</summary>
     public const int DataTypeFieldNumber = 2;
-    private int dataType_;
+    public int dataType_;
     /// <summary>
     /// The data type of the tensor.
     /// This field MUST have a valid TensorProto.DataType value
@@ -3471,7 +3471,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "segment" field.</summary>
     public const int SegmentFieldNumber = 3;
-    private global::Onnx.TensorProto.Types.Segment segment_;
+    public global::Onnx.TensorProto.Types.Segment segment_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Onnx.TensorProto.Types.Segment Segment {
       get { return segment_; }
@@ -3482,9 +3482,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "float_data" field.</summary>
     public const int FloatDataFieldNumber = 4;
-    private static readonly pb::FieldCodec<float> _repeated_floatData_codec
+    public static readonly pb::FieldCodec<float> _repeated_floatData_codec
         = pb::FieldCodec.ForFloat(34);
-    private readonly pbc::RepeatedField<float> floatData_ = new pbc::RepeatedField<float>();
+    public readonly pbc::RepeatedField<float> floatData_ = new pbc::RepeatedField<float>();
     /// <summary>
     /// For float and complex64 values
     /// Complex64 tensors are encoded as a single array of floats,
@@ -3501,9 +3501,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "int32_data" field.</summary>
     public const int Int32DataFieldNumber = 5;
-    private static readonly pb::FieldCodec<int> _repeated_int32Data_codec
+    public static readonly pb::FieldCodec<int> _repeated_int32Data_codec
         = pb::FieldCodec.ForInt32(42);
-    private readonly pbc::RepeatedField<int> int32Data_ = new pbc::RepeatedField<int>();
+    public readonly pbc::RepeatedField<int> int32Data_ = new pbc::RepeatedField<int>();
     /// <summary>
     /// For int32, uint8, int8, uint16, int16, bool, and float16 values
     /// float16 values must be bit-wise converted to an uint16_t prior
@@ -3518,9 +3518,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "string_data" field.</summary>
     public const int StringDataFieldNumber = 6;
-    private static readonly pb::FieldCodec<pb::ByteString> _repeated_stringData_codec
+    public static readonly pb::FieldCodec<pb::ByteString> _repeated_stringData_codec
         = pb::FieldCodec.ForBytes(50);
-    private readonly pbc::RepeatedField<pb::ByteString> stringData_ = new pbc::RepeatedField<pb::ByteString>();
+    public readonly pbc::RepeatedField<pb::ByteString> stringData_ = new pbc::RepeatedField<pb::ByteString>();
     /// <summary>
     /// For strings.
     /// Each element of string_data is a UTF-8 encoded Unicode
@@ -3535,9 +3535,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "int64_data" field.</summary>
     public const int Int64DataFieldNumber = 7;
-    private static readonly pb::FieldCodec<long> _repeated_int64Data_codec
+    public static readonly pb::FieldCodec<long> _repeated_int64Data_codec
         = pb::FieldCodec.ForInt64(58);
-    private readonly pbc::RepeatedField<long> int64Data_ = new pbc::RepeatedField<long>();
+    public readonly pbc::RepeatedField<long> int64Data_ = new pbc::RepeatedField<long>();
     /// <summary>
     /// For int64.
     /// When this field is present, the data_type field MUST be INT64
@@ -3549,7 +3549,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 8;
-    private string name_ = "";
+    public string name_ = "";
     /// <summary>
     /// Optionally, a name for the tensor.
     /// </summary>
@@ -3563,7 +3563,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "doc_string" field.</summary>
     public const int DocStringFieldNumber = 12;
-    private string docString_ = "";
+    public string docString_ = "";
     /// <summary>
     /// A human-readable documentation for this tensor. Markdown is allowed.
     /// </summary>
@@ -3577,7 +3577,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "raw_data" field.</summary>
     public const int RawDataFieldNumber = 9;
-    private pb::ByteString rawData_ = pb::ByteString.Empty;
+    public pb::ByteString rawData_ = pb::ByteString.Empty;
     /// <summary>
     /// Serializations can either use one of the fields above, or use this
     /// raw bytes field. The only exception is the string case, where one is
@@ -3605,9 +3605,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "external_data" field.</summary>
     public const int ExternalDataFieldNumber = 13;
-    private static readonly pb::FieldCodec<global::Onnx.StringStringEntryProto> _repeated_externalData_codec
+    public static readonly pb::FieldCodec<global::Onnx.StringStringEntryProto> _repeated_externalData_codec
         = pb::FieldCodec.ForMessage(106, global::Onnx.StringStringEntryProto.Parser);
-    private readonly pbc::RepeatedField<global::Onnx.StringStringEntryProto> externalData_ = new pbc::RepeatedField<global::Onnx.StringStringEntryProto>();
+    public readonly pbc::RepeatedField<global::Onnx.StringStringEntryProto> externalData_ = new pbc::RepeatedField<global::Onnx.StringStringEntryProto>();
     /// <summary>
     /// Data can be stored inside the protobuf file using type-specific fields or raw_data.
     /// Alternatively, raw bytes data can be stored in an external file, using the external_data field.
@@ -3626,7 +3626,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "data_location" field.</summary>
     public const int DataLocationFieldNumber = 14;
-    private global::Onnx.TensorProto.Types.DataLocation dataLocation_ = global::Onnx.TensorProto.Types.DataLocation.Default;
+    public global::Onnx.TensorProto.Types.DataLocation dataLocation_ = global::Onnx.TensorProto.Types.DataLocation.Default;
     /// <summary>
     /// If value not set, data is stored in raw_data (if set) otherwise in type-specified field.
     /// </summary>
@@ -3640,9 +3640,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "double_data" field.</summary>
     public const int DoubleDataFieldNumber = 10;
-    private static readonly pb::FieldCodec<double> _repeated_doubleData_codec
+    public static readonly pb::FieldCodec<double> _repeated_doubleData_codec
         = pb::FieldCodec.ForDouble(82);
-    private readonly pbc::RepeatedField<double> doubleData_ = new pbc::RepeatedField<double>();
+    public readonly pbc::RepeatedField<double> doubleData_ = new pbc::RepeatedField<double>();
     /// <summary>
     /// For double
     /// Complex128 tensors are encoded as a single array of doubles,
@@ -3659,9 +3659,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "uint64_data" field.</summary>
     public const int Uint64DataFieldNumber = 11;
-    private static readonly pb::FieldCodec<ulong> _repeated_uint64Data_codec
+    public static readonly pb::FieldCodec<ulong> _repeated_uint64Data_codec
         = pb::FieldCodec.ForUInt64(90);
-    private readonly pbc::RepeatedField<ulong> uint64Data_ = new pbc::RepeatedField<ulong>();
+    public readonly pbc::RepeatedField<ulong> uint64Data_ = new pbc::RepeatedField<ulong>();
     /// <summary>
     /// For uint64 and uint32 values
     /// When this field is present, the data_type field MUST be
@@ -4132,8 +4132,8 @@ namespace Onnx {
           , pb::IBufferMessage
       #endif
       {
-        private static readonly pb::MessageParser<Segment> _parser = new pb::MessageParser<Segment>(() => new Segment());
-        private pb::UnknownFieldSet _unknownFields;
+        public static readonly pb::MessageParser<Segment> _parser = new pb::MessageParser<Segment>(() => new Segment());
+        public pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pb::MessageParser<Segment> Parser { get { return _parser; } }
 
@@ -4168,7 +4168,7 @@ namespace Onnx {
 
         /// <summary>Field number for the "begin" field.</summary>
         public const int BeginFieldNumber = 1;
-        private long begin_;
+        public long begin_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public long Begin {
           get { return begin_; }
@@ -4179,7 +4179,7 @@ namespace Onnx {
 
         /// <summary>Field number for the "end" field.</summary>
         public const int EndFieldNumber = 2;
-        private long end_;
+        public long end_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public long End {
           get { return end_; }
@@ -4348,8 +4348,8 @@ namespace Onnx {
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<SparseTensorProto> _parser = new pb::MessageParser<SparseTensorProto>(() => new SparseTensorProto());
-    private pb::UnknownFieldSet _unknownFields;
+    public static readonly pb::MessageParser<SparseTensorProto> _parser = new pb::MessageParser<SparseTensorProto>(() => new SparseTensorProto());
+    public pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<SparseTensorProto> Parser { get { return _parser; } }
 
@@ -4385,7 +4385,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "values" field.</summary>
     public const int ValuesFieldNumber = 1;
-    private global::Onnx.TensorProto values_;
+    public global::Onnx.TensorProto values_;
     /// <summary>
     /// The sequence of non-default values are encoded as a tensor of shape [NNZ].
     /// The default-value is zero for numeric tensors, and empty-string for string tensors.
@@ -4402,7 +4402,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "indices" field.</summary>
     public const int IndicesFieldNumber = 2;
-    private global::Onnx.TensorProto indices_;
+    public global::Onnx.TensorProto indices_;
     /// <summary>
     /// The indices of the non-default values, which may be stored in one of two formats.
     /// (a) Indices can be a tensor of shape [NNZ, rank] with the [i,j]-th value
@@ -4425,9 +4425,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "dims" field.</summary>
     public const int DimsFieldNumber = 3;
-    private static readonly pb::FieldCodec<long> _repeated_dims_codec
+    public static readonly pb::FieldCodec<long> _repeated_dims_codec
         = pb::FieldCodec.ForInt64(26);
-    private readonly pbc::RepeatedField<long> dims_ = new pbc::RepeatedField<long>();
+    public readonly pbc::RepeatedField<long> dims_ = new pbc::RepeatedField<long>();
     /// <summary>
     /// The shape of the underlying dense-tensor: [dim_1, dim_2, ... dim_rank]
     /// </summary>
@@ -4627,8 +4627,8 @@ namespace Onnx {
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<TensorShapeProto> _parser = new pb::MessageParser<TensorShapeProto>(() => new TensorShapeProto());
-    private pb::UnknownFieldSet _unknownFields;
+    public static readonly pb::MessageParser<TensorShapeProto> _parser = new pb::MessageParser<TensorShapeProto>(() => new TensorShapeProto());
+    public pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<TensorShapeProto> Parser { get { return _parser; } }
 
@@ -4662,9 +4662,9 @@ namespace Onnx {
 
     /// <summary>Field number for the "dim" field.</summary>
     public const int DimFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Onnx.TensorShapeProto.Types.Dimension> _repeated_dim_codec
+    public static readonly pb::FieldCodec<global::Onnx.TensorShapeProto.Types.Dimension> _repeated_dim_codec
         = pb::FieldCodec.ForMessage(10, global::Onnx.TensorShapeProto.Types.Dimension.Parser);
-    private readonly pbc::RepeatedField<global::Onnx.TensorShapeProto.Types.Dimension> dim_ = new pbc::RepeatedField<global::Onnx.TensorShapeProto.Types.Dimension>();
+    public readonly pbc::RepeatedField<global::Onnx.TensorShapeProto.Types.Dimension> dim_ = new pbc::RepeatedField<global::Onnx.TensorShapeProto.Types.Dimension>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Onnx.TensorShapeProto.Types.Dimension> Dim {
       get { return dim_; }
@@ -4790,8 +4790,8 @@ namespace Onnx {
           , pb::IBufferMessage
       #endif
       {
-        private static readonly pb::MessageParser<Dimension> _parser = new pb::MessageParser<Dimension>(() => new Dimension());
-        private pb::UnknownFieldSet _unknownFields;
+        public static readonly pb::MessageParser<Dimension> _parser = new pb::MessageParser<Dimension>(() => new Dimension());
+        public pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pb::MessageParser<Dimension> Parser { get { return _parser; } }
 
@@ -4859,7 +4859,7 @@ namespace Onnx {
 
         /// <summary>Field number for the "denotation" field.</summary>
         public const int DenotationFieldNumber = 3;
-        private string denotation_ = "";
+        public string denotation_ = "";
         /// <summary>
         /// Standard denotation can optionally be used to denote tensor
         /// dimensions with standard semantic descriptions to ensure
@@ -4875,14 +4875,14 @@ namespace Onnx {
           }
         }
 
-        private object value_;
+        public object value_;
         /// <summary>Enum of possible cases for the "value" oneof.</summary>
         public enum ValueOneofCase {
           None = 0,
           DimValue = 1,
           DimParam = 2,
         }
-        private ValueOneofCase valueCase_ = ValueOneofCase.None;
+        public ValueOneofCase valueCase_ = ValueOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public ValueOneofCase ValueCase {
           get { return valueCase_; }
@@ -5085,8 +5085,8 @@ namespace Onnx {
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<TypeProto> _parser = new pb::MessageParser<TypeProto>(() => new TypeProto());
-    private pb::UnknownFieldSet _unknownFields;
+    public static readonly pb::MessageParser<TypeProto> _parser = new pb::MessageParser<TypeProto>(() => new TypeProto());
+    public pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<TypeProto> Parser { get { return _parser; } }
 
@@ -5174,7 +5174,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "denotation" field.</summary>
     public const int DenotationFieldNumber = 6;
-    private string denotation_ = "";
+    public string denotation_ = "";
     /// <summary>
     /// An optional denotation can be used to denote the whole
     /// type with a standard semantic description as to what is
@@ -5189,7 +5189,7 @@ namespace Onnx {
       }
     }
 
-    private object value_;
+    public object value_;
     /// <summary>Enum of possible cases for the "value" oneof.</summary>
     public enum ValueOneofCase {
       None = 0,
@@ -5197,7 +5197,7 @@ namespace Onnx {
       SequenceType = 4,
       MapType = 5,
     }
-    private ValueOneofCase valueCase_ = ValueOneofCase.None;
+    public ValueOneofCase valueCase_ = ValueOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ValueOneofCase ValueCase {
       get { return valueCase_; }
@@ -5455,8 +5455,8 @@ namespace Onnx {
           , pb::IBufferMessage
       #endif
       {
-        private static readonly pb::MessageParser<Tensor> _parser = new pb::MessageParser<Tensor>(() => new Tensor());
-        private pb::UnknownFieldSet _unknownFields;
+        public static readonly pb::MessageParser<Tensor> _parser = new pb::MessageParser<Tensor>(() => new Tensor());
+        public pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pb::MessageParser<Tensor> Parser { get { return _parser; } }
 
@@ -5491,7 +5491,7 @@ namespace Onnx {
 
         /// <summary>Field number for the "elem_type" field.</summary>
         public const int ElemTypeFieldNumber = 1;
-        private int elemType_;
+        public int elemType_;
         /// <summary>
         /// This field MUST NOT have the value of UNDEFINED
         /// This field MUST have a valid TensorProto.DataType value
@@ -5507,7 +5507,7 @@ namespace Onnx {
 
         /// <summary>Field number for the "shape" field.</summary>
         public const int ShapeFieldNumber = 2;
-        private global::Onnx.TensorShapeProto shape_;
+        public global::Onnx.TensorShapeProto shape_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Onnx.TensorShapeProto Shape {
           get { return shape_; }
@@ -5680,8 +5680,8 @@ namespace Onnx {
           , pb::IBufferMessage
       #endif
       {
-        private static readonly pb::MessageParser<Sequence> _parser = new pb::MessageParser<Sequence>(() => new Sequence());
-        private pb::UnknownFieldSet _unknownFields;
+        public static readonly pb::MessageParser<Sequence> _parser = new pb::MessageParser<Sequence>(() => new Sequence());
+        public pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pb::MessageParser<Sequence> Parser { get { return _parser; } }
 
@@ -5715,7 +5715,7 @@ namespace Onnx {
 
         /// <summary>Field number for the "elem_type" field.</summary>
         public const int ElemTypeFieldNumber = 1;
-        private global::Onnx.TypeProto elemType_;
+        public global::Onnx.TypeProto elemType_;
         /// <summary>
         /// The type and optional shape of each element of the sequence.
         /// This field MUST be present for this version of the IR.
@@ -5868,8 +5868,8 @@ namespace Onnx {
           , pb::IBufferMessage
       #endif
       {
-        private static readonly pb::MessageParser<Map> _parser = new pb::MessageParser<Map>(() => new Map());
-        private pb::UnknownFieldSet _unknownFields;
+        public static readonly pb::MessageParser<Map> _parser = new pb::MessageParser<Map>(() => new Map());
+        public pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pb::MessageParser<Map> Parser { get { return _parser; } }
 
@@ -5904,7 +5904,7 @@ namespace Onnx {
 
         /// <summary>Field number for the "key_type" field.</summary>
         public const int KeyTypeFieldNumber = 1;
-        private int keyType_;
+        public int keyType_;
         /// <summary>
         /// This field MUST have a valid TensorProto.DataType value
         /// This field MUST be present for this version of the IR.
@@ -5920,7 +5920,7 @@ namespace Onnx {
 
         /// <summary>Field number for the "value_type" field.</summary>
         public const int ValueTypeFieldNumber = 2;
-        private global::Onnx.TypeProto valueType_;
+        public global::Onnx.TypeProto valueType_;
         /// <summary>
         /// This field MUST be present for this version of the IR.
         /// </summary>
@@ -6103,8 +6103,8 @@ namespace Onnx {
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<OperatorSetIdProto> _parser = new pb::MessageParser<OperatorSetIdProto>(() => new OperatorSetIdProto());
-    private pb::UnknownFieldSet _unknownFields;
+    public static readonly pb::MessageParser<OperatorSetIdProto> _parser = new pb::MessageParser<OperatorSetIdProto>(() => new OperatorSetIdProto());
+    public pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<OperatorSetIdProto> Parser { get { return _parser; } }
 
@@ -6139,7 +6139,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "domain" field.</summary>
     public const int DomainFieldNumber = 1;
-    private string domain_ = "";
+    public string domain_ = "";
     /// <summary>
     /// The domain of the operator set being identified.
     /// The empty string ("") or absence of this field implies the operator
@@ -6156,7 +6156,7 @@ namespace Onnx {
 
     /// <summary>Field number for the "version" field.</summary>
     public const int VersionFieldNumber = 2;
-    private long version_;
+    public long version_;
     /// <summary>
     /// The version of the operator set being identified.
     /// This field MUST be present in this version of the IR.

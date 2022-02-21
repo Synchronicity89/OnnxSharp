@@ -4,9 +4,9 @@ using System.Collections.Generic;
 namespace Onnx.Collections
 {
     /// <summary>Convenience extension methods for <see cref="IList{T}"/>.</summary>
-    internal static class ListExtensions
+    public static class ListExtensions
     {
-        internal static bool TryRemove<T, TSelect>(this IList<T> fields, Func<T, TSelect> select, Predicate<TSelect> predicate)
+        public static bool TryRemove<T, TSelect>(this IList<T> fields, Func<T, TSelect> select, Predicate<TSelect> predicate)
         {
             for (int i = 0; i < fields.Count; i++)
             {
@@ -21,7 +21,7 @@ namespace Onnx.Collections
             return false;
         }
 
-        internal static bool TryRemove<T, TSelect>(this IList<T> fields, Func<T, TSelect> select, TSelect valueToRemove)
+        public static bool TryRemove<T, TSelect>(this IList<T> fields, Func<T, TSelect> select, TSelect valueToRemove)
             where TSelect : IEquatable<TSelect>
         {
             var index = fields.IndexOf(select, valueToRemove);
@@ -33,7 +33,7 @@ namespace Onnx.Collections
             return false;
         }
 
-        internal static int IndexOf<T, TSelect>(this IList<T> fields, Func<T, TSelect> select, TSelect valueToFind)
+        public static int IndexOf<T, TSelect>(this IList<T> fields, Func<T, TSelect> select, TSelect valueToFind)
             where TSelect : IEquatable<TSelect>
         {
             for (int i = 0; i < fields.Count; i++)

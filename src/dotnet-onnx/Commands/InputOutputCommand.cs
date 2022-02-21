@@ -5,7 +5,7 @@ using Onnx;
 
 public abstract class InputOutputCommand : Command
 {
-    protected readonly IConsole _console;
+    public readonly IConsole _console;
 
     public InputOutputCommand(IConsole console)
     {
@@ -35,5 +35,5 @@ public abstract class InputOutputCommand : Command
         return Task.CompletedTask;
     }
 
-    protected abstract void Run(ModelProto model);
+    public abstract void Run(ModelProto model);
 }

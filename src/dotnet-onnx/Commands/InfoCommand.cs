@@ -9,7 +9,7 @@ public class InfoCommand : InputCommand
         LogInput = null;
     }
 
-    protected override void Run(ModelProto model)
+    public override void Run(ModelProto model)
     {
         var writer = _console.Out;
         

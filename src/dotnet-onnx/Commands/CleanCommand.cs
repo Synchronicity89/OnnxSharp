@@ -7,7 +7,7 @@ public class CleanCommand : InputOutputCommand
     public CleanCommand(IConsole console) : base(console)
     { }
 
-    protected override void Run(ModelProto model)
+    public override void Run(ModelProto model)
     {
         model.Graph.Clean();
     }

@@ -2,21 +2,21 @@
 
 namespace Onnx
 {
-    internal static class Ops
+    public static class Ops
     {
-        internal static class Reshape
+        public static class Reshape
         {
-            internal const int InputDataIndex = 0;
-            internal const int InputShapeIndex = 1;
+            public const int InputDataIndex = 0;
+            public const int InputShapeIndex = 1;
 
             // Reshape op supports only one dimension in shape to be dynamic,
             // which is defined as -1.
-            internal const int DynamicReshapeValue = -1;
+            public const int DynamicReshapeValue = -1;
 
-            internal static readonly OpSpec Spec = new OpSpec(nameof(Reshape), 2, 1);
+            public static readonly OpSpec Spec = new OpSpec(nameof(Reshape), 2, 1);
         }
 
-        internal readonly struct OpSpec
+        public readonly struct OpSpec
         {
             public OpSpec(string opType, int inputs, int outputs)
             {

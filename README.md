@@ -8,7 +8,10 @@
 |`dotnet-onnx`|[![NuGet](https://img.shields.io/nuget/v/dotnet-onnx)](https://www.nuget.org/packages/dotnet-onnx/) [![Downloads](https://img.shields.io/nuget/dt/dotnet-onnx)](https://www.nuget.org/packages/dotnet-onnx/) |
 
 # `OnnxSharp` library and `dotnet-onnx` tool
-ONNX format parsing and manipulation in C# and with command line .NET tool.
+This fork has been whiteboxed - had internal, private, and protected all replaced with public, to allow access to data from under the hood.  
+Use the upstream repo or nuget package for a more secure, blackbox implementation.
+This fork will probably be frozen if there are major changes under the hood in the upstream repo that are too difficult to merge in.
+ONNX format parsing and manipulation in C# and with command line .NET tool. 
 
 # Quick Guide
 Install latest version of .NET:

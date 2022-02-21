@@ -2,9 +2,9 @@
 
 namespace Onnx
 {
-    internal static class Thrower
+    public static class Thrower
     {
-        internal static void EnsureLittleEndian()
+        public static void EnsureLittleEndian()
         {
             if (!BitConverter.IsLittleEndian)
             {

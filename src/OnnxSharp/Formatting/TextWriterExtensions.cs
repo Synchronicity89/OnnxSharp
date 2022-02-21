@@ -2,9 +2,9 @@
 
 namespace Onnx.Formatting
 {
-    internal static class TextWriterExtensions
+    public static class TextWriterExtensions
     {
-        internal static void WriteAligned(this TextWriter writer, 
+        public static void WriteAligned(this TextWriter writer, 
             string columnName, Align alignment, char pad, int width)
         {
             var padCount = width - columnName.Length;
@@ -19,7 +19,7 @@ namespace Onnx.Formatting
             }
         }
 
-        internal static void Write(this TextWriter writer, char value, int repeatCount)
+        public static void Write(this TextWriter writer, char value, int repeatCount)
         {
             for (int i = 0; i < repeatCount; i++)
             {

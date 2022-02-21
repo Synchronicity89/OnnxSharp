@@ -6,8 +6,8 @@ using Onnx;
 
 public abstract class InputCommand : Command
 {
-    protected readonly IConsole _console;
-    protected Action<string> LogInput;
+    public readonly IConsole _console;
+    public Action<string> LogInput;
 
     public InputCommand(IConsole console)
     {
@@ -30,5 +30,5 @@ public abstract class InputCommand : Command
         return Task.CompletedTask;
     }
 
-    protected abstract void Run(ModelProto model);
+    public abstract void Run(ModelProto model);
 }

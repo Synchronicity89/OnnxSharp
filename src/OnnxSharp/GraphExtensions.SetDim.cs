@@ -108,7 +108,7 @@ namespace Onnx
             }
         }
 
-        internal static void SetDim(RepeatedField<ValueInfoProto> valueInfos, 
+        public static void SetDim(RepeatedField<ValueInfoProto> valueInfos, 
             int dimIndex, DimParamOrValue dimParamOrValue)
         {
             for (int i = 0; i < valueInfos.Count; i++)
@@ -118,7 +118,7 @@ namespace Onnx
             }
         }
 
-        internal static void SetDim(ValueInfoProto valueInfo, 
+        public static void SetDim(ValueInfoProto valueInfo, 
             int dimIndex, DimParamOrValue dimParamOrValue)
         {
             var shape = valueInfo.Type.TensorType.Shape;
@@ -135,7 +135,7 @@ namespace Onnx
             }
         }
 
-        internal static void SetDim(TensorShapeProto.Types.Dimension dim, 
+        public static void SetDim(TensorShapeProto.Types.Dimension dim, 
             DimParamOrValue dimParamOrValue)
         {
             dim.ClearValue();

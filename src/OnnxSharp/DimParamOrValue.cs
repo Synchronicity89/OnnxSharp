@@ -10,7 +10,7 @@ namespace Onnx
         readonly string _param;
         readonly int _value;
 
-        private DimParamOrValue(string param, int value)
+        public DimParamOrValue(string param, int value)
         {
             _param = param;
             _value = value;

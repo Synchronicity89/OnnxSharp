@@ -112,7 +112,7 @@ namespace Onnx
             }
         }
 
-        internal static void ReplaceInput(RepeatedField<NodeProto> nodes, string oldValue, string newValue)
+        public static void ReplaceInput(RepeatedField<NodeProto> nodes, string oldValue, string newValue)
         {
             for (int nodeIndex = 0; nodeIndex < nodes.Count; nodeIndex++)
             {

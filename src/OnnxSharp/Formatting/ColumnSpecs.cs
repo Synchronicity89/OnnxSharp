@@ -7,11 +7,11 @@ using Onnx.Collections;
 
 namespace Onnx.Formatting
 {
-    internal static partial class ColumnSpecs
+    public static partial class ColumnSpecs
     {
-        internal static partial class ValueInfo
+        public static partial class ValueInfo
         {
-            internal static readonly IReadOnlyList<ColumnSpec<ValueInfoProto>> Tensor =
+            public static readonly IReadOnlyList<ColumnSpec<ValueInfoProto>> Tensor =
                 new ColumnSpec<ValueInfoProto>[]
                 {
                     new ("Name",       Align.Left,  i => i.Name),
@@ -21,7 +21,7 @@ namespace Onnx.Formatting
                     new ("SizeInFile", Align.Right, i => i.CalculateSize().ToString()),
                 };
 
-            internal static readonly IReadOnlyList<ColumnSpec<ValueInfoProto>> Sequence =
+            public static readonly IReadOnlyList<ColumnSpec<ValueInfoProto>> Sequence =
                 new ColumnSpec<ValueInfoProto>[]
                 {
                     new ("Name",       Align.Left, i => i.Name),
@@ -30,7 +30,7 @@ namespace Onnx.Formatting
                     new ("SizeInFile", Align.Left, i => i.CalculateSize().ToString()),
                 };
 
-            internal static readonly IReadOnlyList<ColumnSpec<ValueInfoProto>> Map =
+            public static readonly IReadOnlyList<ColumnSpec<ValueInfoProto>> Map =
                 new ColumnSpec<ValueInfoProto>[]
                 {
                     new ("Name",       Align.Left, i => i.Name),
@@ -40,7 +40,7 @@ namespace Onnx.Formatting
                     new ("SizeInFile", Align.Left, i => i.CalculateSize().ToString()),
                 };
 
-            internal static readonly IReadOnlyList<ColumnSpec<ValueInfoProto>> None =
+            public static readonly IReadOnlyList<ColumnSpec<ValueInfoProto>> None =
                 new ColumnSpec<ValueInfoProto>[]
                 {
                     new ("Name",       Align.Left, i => i.Name),
@@ -49,7 +49,7 @@ namespace Onnx.Formatting
                 };
         }
 
-        internal static readonly IReadOnlyList<ColumnSpec<TensorProto>> Tensor =
+        public static readonly IReadOnlyList<ColumnSpec<TensorProto>> Tensor =
             new ColumnSpec<TensorProto>[]
             {
                 new ("Name",       Align.Left,  t => t.Name),

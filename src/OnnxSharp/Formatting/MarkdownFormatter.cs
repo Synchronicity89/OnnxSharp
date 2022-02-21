@@ -5,34 +5,34 @@ using System.Linq;
 
 namespace Onnx.Formatting
 {
-    internal static class MarkdownFormatter
+    public static class MarkdownFormatter
     {
-        internal static void FormatAsTensors(this IReadOnlyList<ValueInfoProto> valueInfos, TextWriter writer)
+        public static void FormatAsTensors(this IReadOnlyList<ValueInfoProto> valueInfos, TextWriter writer)
         {
             Format(valueInfos, ColumnSpecs.ValueInfo.Tensor, writer);
         }
 
-        internal static void FormatAsSequences(this IReadOnlyList<ValueInfoProto> valueInfos, TextWriter writer)
+        public static void FormatAsSequences(this IReadOnlyList<ValueInfoProto> valueInfos, TextWriter writer)
         {
             Format(valueInfos, ColumnSpecs.ValueInfo.Sequence, writer);
         }
 
-        internal static void FormatAsMaps(this IReadOnlyList<ValueInfoProto> valueInfos, TextWriter writer)
+        public static void FormatAsMaps(this IReadOnlyList<ValueInfoProto> valueInfos, TextWriter writer)
         {
             Format(valueInfos, ColumnSpecs.ValueInfo.Map, writer);
         }
 
-        internal static void FormatAsNones(this IReadOnlyList<ValueInfoProto> valueInfos, TextWriter writer)
+        public static void FormatAsNones(this IReadOnlyList<ValueInfoProto> valueInfos, TextWriter writer)
         {
             Format(valueInfos, ColumnSpecs.ValueInfo.None, writer);
         }
 
-        internal static void Format(this IReadOnlyList<TensorProto> summaries, TextWriter writer)
+        public static void Format(this IReadOnlyList<TensorProto> summaries, TextWriter writer)
         {
             Format(summaries, ColumnSpecs.Tensor, writer);
         }
 
-        internal static void Format<T>(
+        public static void Format<T>(
             IReadOnlyList<T> values,
             IReadOnlyList<ColumnSpec<T>> columnSpecs,
             TextWriter writer)
@@ -59,7 +59,7 @@ namespace Onnx.Formatting
             Format(table, columnSpecs, maxColumnWidth, writer);
         }
 
-        internal static void Format(
+        public static void Format(
             string[,] table,
             IReadOnlyList<ColumnSpec> columnSpecs,
             IReadOnlyList<int> columnWidths,
