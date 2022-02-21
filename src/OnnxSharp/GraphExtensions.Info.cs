@@ -43,7 +43,7 @@ namespace Onnx
             Info(graph.ValueInfo, writer);
         }
 
-        static void Info(IReadOnlyList<ValueInfoProto> valueInfos, TextWriter writer)
+        public static void Info(IReadOnlyList<ValueInfoProto> valueInfos, TextWriter writer)
         {
             var tensorTypes = valueInfos.Where(i => i.Type.ValueCase == TypeProto.ValueOneofCase.TensorType).ToList();
             WriteInfoIfAny(tensorTypes, "Tensors", MarkdownFormatter.FormatAsTensors, writer);
@@ -58,7 +58,7 @@ namespace Onnx
             WriteInfoIfAny(noneTypes, "Nones", MarkdownFormatter.FormatAsNones, writer);
         }
 
-        static void WriteInfoIfAny<T>(IReadOnlyList<T> values, string name,
+        public static void WriteInfoIfAny<T>(IReadOnlyList<T> values, string name,
             Action<IReadOnlyList<T>, TextWriter> info, TextWriter writer)
         {
             if (values.Count > 0)

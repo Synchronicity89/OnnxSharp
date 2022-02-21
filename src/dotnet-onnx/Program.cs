@@ -15,9 +15,9 @@ using McMaster.Extensions.CommandLineUtils;
  Subcommand(typeof(SetDimCommand)),
  Subcommand(typeof(InfoCommand))
 ]
-class Program
+public class Program
 {
-    static Task<int> Main(string[] args)
+    public static Task<int> Main(string[] args)
     {
         var app = new CommandLineApplication<Program>(
             PhysicalConsole.Singleton,

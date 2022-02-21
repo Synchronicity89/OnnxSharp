@@ -45,7 +45,7 @@ namespace Onnx
         /// <summary>Returns the hash code for this instance.</summary>
         public override int GetHashCode() => IsParam ? Param.GetHashCode() : Value.GetHashCode();
 
-        void CheckIsParam()
+        public void CheckIsParam()
         {
             if (IsValue) 
             { 
@@ -53,7 +53,7 @@ namespace Onnx
             }
         }
 
-        void CheckIsValue()
+        public void CheckIsValue()
         {
             if (IsParam)
             { 
@@ -61,6 +61,6 @@ namespace Onnx
             }
         }
 
-        static bool IsParamValid(string param) => !string.IsNullOrWhiteSpace(param);
+        public static bool IsParamValid(string param) => !string.IsNullOrWhiteSpace(param);
     }
 }

@@ -106,7 +106,7 @@ namespace OnnxSharp.Test
             AssertModelBytesEqualToEmbeddedExpected(model, expectedName);
         }
 
-        static void AssertModelBytesEqualToEmbeddedExpected(ModelProto model, string expectedName)
+        public static void AssertModelBytesEqualToEmbeddedExpected(ModelProto model, string expectedName)
         {
             var actualBytes = model.ToByteArray();
             //model.WriteToFile(expectedName);

@@ -48,7 +48,7 @@ namespace Onnx
             SetDim(graph.Output, dimIndex, dimParamOrValue);
         }
 
-        static void SetDimInReshapes(GraphProto graph, int dimIndex, int dimValue)
+        public static void SetDimInReshapes(GraphProto graph, int dimIndex, int dimValue)
         {
             var nodes = graph.Node;
             var initializers = graph.Initializer;
@@ -77,7 +77,7 @@ namespace Onnx
             }
         }
 
-        static void SetDimInReshapeTensorShape(TensorProto shape, int dimIndex, int dimValue)
+        public static void SetDimInReshapeTensorShape(TensorProto shape, int dimIndex, int dimValue)
         {
             Debug.Assert(shape.DataType == (int)TensorProto.Types.DataType.Int64);
             var dims = shape.Dims;

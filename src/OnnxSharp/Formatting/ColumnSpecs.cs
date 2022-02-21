@@ -60,12 +60,12 @@ namespace Onnx.Formatting
                 new ("SizeInFile", Align.Right, t => t.CalculateSize().ToString()),
             };
 
-        static string FormatShape(TensorShapeProto shape)
+        public static string FormatShape(TensorShapeProto shape)
         {
             return string.Join("x", shape.Dim.Select(d => Format(d)));
         }
 
-        static string Format(TensorShapeProto.Types.Dimension d) => d.ValueCase switch
+        public static string Format(TensorShapeProto.Types.Dimension d) => d.ValueCase switch
         {
             TensorShapeProto.Types.Dimension.ValueOneofCase.DimParam => d.DimParam,
             TensorShapeProto.Types.Dimension.ValueOneofCase.DimValue => d.DimValue.ToString(),
@@ -73,7 +73,7 @@ namespace Onnx.Formatting
             _ => throw new NotSupportedException(d.ValueCase.ToString()),
         };
 
-        static unsafe string FormatValuesOrStats(TensorProto tensor) => tensor.DataType() switch
+        public static unsafe string FormatValuesOrStats(TensorProto tensor) => tensor.DataType() switch
         {
             // NOTE: Long lines accepted below for structure
             TensorProto.Types.DataType.Float => FormatValuesOrStats<float, float>(tensor.FloatData, tensor.RawData, &Math.Min, (m, v) => m + v, (m, c) => m / c, &Math.Max),
@@ -86,7 +86,7 @@ namespace Onnx.Formatting
 
         // NOTE: Perf below is not great since function pointer and func calls cannot be inlined.
         //       If necessary refactor to use "value type functor"s.
-        static unsafe string FormatValuesOrStats<T, TMean>(
+        public static unsafe string FormatValuesOrStats<T, TMean>(
             IReadOnlyList<T> values,
             ByteString rawData,
             delegate*<T, T, T> min,
@@ -128,9 +128,9 @@ namespace Onnx.Formatting
             }
         }
 
-        static string FormatValues<T>(IReadOnlyList<T> values) => $"[{string.Join(",", values)}]";
+        public static string FormatValues<T>(IReadOnlyList<T> values) => $"[{string.Join(",", values)}]";
 
-        static unsafe (T min, TMean mean, T max) GetStats<T, TMean>(
+        public static unsafe (T min, TMean mean, T max) GetStats<T, TMean>(
             ReadOnlySpan<T> values,
             delegate*<T, T, T> min,
             Func<TMean, T, TMean> add,
@@ -152,7 +152,7 @@ namespace Onnx.Formatting
             return (minValue, mean, maxValue);
         }
 
-        static unsafe (T min, TMean mean, T max) GetStats<T, TMean>(
+        public static unsafe (T min, TMean mean, T max) GetStats<T, TMean>(
             IReadOnlyList<T> values,
             delegate*<T, T, T> min,
             Func<TMean, T, TMean> add,
